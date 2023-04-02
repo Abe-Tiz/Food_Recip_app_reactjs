@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import ImproveSkill from "./components/ImproveSkill";
 import Navbar from "./components/Navbar";
+import Quotesection from "./components/Quotesection";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         
         <HeroSection />
         <ImproveSkill />
-
+        <Quotesection />
       </div>
 
 

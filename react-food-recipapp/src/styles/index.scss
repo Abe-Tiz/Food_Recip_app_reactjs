@@ -67,34 +67,26 @@ img{
 }
 @import "navbar.scss";
 @import "Hero-section.scss";
+@import "improveskill.scss";
 
-.section.improve-skill{
-    .col.img{
-       img{
-        width: 100%;
-       }
+.section.quote{
+   display: block;
+   .quote-text{
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--text-color);
+     
+    svg{
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        margin-right: .5rem;
     }
-    .col.typography{
-        padding-left: 1rem;
-    }
-    .skill-item{
-        border-left: .25rem solid var(--primary-color);
-        margin-bottom: .5rem;
-        padding: .1rem 0 .1rem .5rem;
-        color: var(--text-light);
-        font-weight: bold;
-        transform: translateX(100%);
-        opacity: 0;
-        animation: getAnimationDuration(.3s) slideInRight forwards;
-        @for $i from 1 to 8 {
-            &:nth-child(#{$i}){
-                animation-delay: #{$i * .1}s;
-            }
-        }
-    }
-    .btn{
-        margin-top: 1rem;
-    }
+   }
+   .quote-author{
+    color: var(--text-light);
+    text-align: right;
+    margin-top: 1rem;
+   }
 }
 .main{
     padding-block: 10vh;
