@@ -1,4 +1,5 @@
 import Chiefsection from "./components/Chiefsection";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import ImproveSkill from "./components/ImproveSkill";
 import Navbar from "./components/Navbar";
@@ -14,7 +15,9 @@ function App() {
         <ImproveSkill />
         <Quotesection />
         <Chiefsection />
+        
       </div>
+      <Footer />
 
 
     </div>

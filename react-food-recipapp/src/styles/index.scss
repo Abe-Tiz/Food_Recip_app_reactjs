@@ -69,56 +69,25 @@ img{
 @import "Hero-section.scss";
 @import "improveskill.scss";
 @import "quotesection.scss";
+@import "chief-section.scss";
 
-.section.chiefs{
-   display: block;
-}
-.chiefs-container{
+.footer{
+    background-color: #0A0A0A;
+    color: #fff;
+    padding-block: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    grid-gap: 1.5rem;
-}
-.chief-card{
-    display: flex;
-    height: 120px;
-    background-color: var(--background-color);
-    border-radius: 5px;
-    overflow: hidden;
-    img{
-       height: 100%;
-       width: 120px;
-       border-radius: 10px; 
-       box-shadow: 2px 3px 7px var(--shadow-color);
-    }
-    .chief-info{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0 1rem .5rem;
-        .chief-name{
-            font-size: 1.2rem;
+    grid-template-columns:3fr 1fr 1fr;
+    grid-gap: 1rem;
+    .footer-section{
+        p{
+            opacity: .9;
+            margin-bottom: .5rem;
+        }
+        p.title{
+            opacity: 1;
+            font-size: 1.1rem;
             font-weight: bold;
-            color: var(--text-color);
-        }
-        .chief-coun, .chief-cuisine{
-           font-size: 1.2rem;
-           color: var(--text-light);
-        }
-        .chief-icon{
-            font-size: 1.2rem;
-            a{
-                margin-right: .5rem;
-              &:nth-child(1){
-                color: #0063f7;
-              }  
-              &:nth-child(2){
-                color: #13b4ff;
-              } 
-              &:nth-child(3){
-                color: #f70000;
-              } 
-            }
+            margin-bottom: 1rem;
         }
     }
 }
@@ -129,6 +98,7 @@ img{
 @import 'Animation.scss';
 .section{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3vw;
     .title{
@@ -143,6 +113,7 @@ img{
         letter-spacing: 1px;
         line-height: 1.3;
         margin-bottom: 1.25rem;
+        width: 100%;
     }
     .col{
         width: 50%;
@@ -152,6 +123,16 @@ img{
 .container{
 padding-inline: 20vh; 
 
+}
+@media screen and (max-width:1200px){
+    .container{
+        padding-inline: 16vh; 
+    }
+}
+@media screen and (max-width:1050px){
+    .container{
+        padding-inline: 12vh; 
+    }
 }
 @media screen and (max-width:768px){
     .navbar{
@@ -163,8 +144,47 @@ padding-inline: 20vh;
         }
 
     }
-    .chief-card{
-        box-shadow: 4px 5px 10px var(--shadow-color);
+    .section{
+        .col{
+            width: 100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
     }
+    .skill-item{
+        display: inline-block;
+        margin: 1rem;
+        
+    }
+    .section.improve-skill .btn{
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+    }
+    .chief-card{
+        box-shadow: 0 5px 10px var(--shadow-color);
+     }
+     .container{
+        padding-inline: 6vh; 
+    }
+    .footer{
+        grid-template-columns: repeat(4,1fr);
+        .footer-section:nth-child(1){
+            grid-column: span 4;
+        }
+        .footer-section:nth-child(2), .footer-section:nth-child(3){
+            grid-column: span 2;
+        }
+
+    }
+  
    
+}
+@media screen and (max-width:480px){
+    .container{
+        padding-inline: 4vh; 
+    }
+    
 }

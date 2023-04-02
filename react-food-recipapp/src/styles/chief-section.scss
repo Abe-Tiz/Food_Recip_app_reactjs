@@ -1,0 +1,52 @@
+.section.chiefs{
+    display: block;
+ }
+ .chiefs-container{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+     grid-gap: 1.5rem;
+ }
+ .chief-card{
+     display: flex;
+     height: 120px;
+     background-color: var(--background-color);
+     border-radius: 5px;
+     overflow: hidden;
+     img{
+        height: 100%;
+        width: 120px;
+        border-radius: 10px; 
+        box-shadow: 2px 3px 7px var(--shadow-color);
+     }
+     .chief-info{
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         padding: 0 1rem .5rem;
+         .chief-name{
+             font-size: 1.2rem;
+             font-weight: bold;
+             color: var(--text-color);
+         }
+         .chief-coun, .chief-cuisine{
+            font-size: 1.2rem;
+            color: var(--text-light);
+         }
+         .chief-icon{
+             font-size: 1.2rem;
+             a{
+                 margin-right: .5rem;
+               &:nth-child(1){
+                 color: #0063f7;
+               }  
+               &:nth-child(2){
+                 color: #13b4ff;
+               } 
+               &:nth-child(3){
+                 color: #f70000;
+               } 
+             }
+         }
+     }
+ }
