@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
+import Sidebar from './Sidebar';
 
 const Navbar = () => {
   const [showSidBar,setShowSideBar]=useState(false);
@@ -10,7 +11,8 @@ const Navbar = () => {
     }
 
   return (
-    <div className='navbar container'>
+    <>
+      <div className='navbar container'>
         <a className='logo' href="#!">F<span>oo</span>diesHub</a>
         <div className="nav-links">
           <a href="#!" className='active'>Home</a>
@@ -22,7 +24,9 @@ const Navbar = () => {
            <div className="bar"></div>
            <div className="bar"></div>
         </div>
-    </div>
+     </div>
+     <Sidebar />
+    </>
   )
 }
 

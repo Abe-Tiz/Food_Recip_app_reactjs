@@ -120,6 +120,17 @@ img{
     }
 }
 
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: var(--background-color);
+    box-shadow: 0 0 0 1000px rgba(0,0,0,0.2),
+                3px 0 5px var(--shadow-color);
+}
+
 .container{
 padding-inline: 20vh; 
 
