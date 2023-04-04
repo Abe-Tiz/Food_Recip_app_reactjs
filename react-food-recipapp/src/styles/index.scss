@@ -127,6 +127,7 @@ img{
     left: 0;
     height: 100%;
     width: 200px;
+    z-index: 999;
     background-color: var(--background-color);
     box-shadow: 0 0 0 1000px rgba(0,0,0,0.2),
                 3px 0 5px var(--shadow-color);
