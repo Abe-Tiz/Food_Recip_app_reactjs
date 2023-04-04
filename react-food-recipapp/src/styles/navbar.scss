@@ -7,6 +7,9 @@
     justify-content: space-between;
     align-items: center;
     z-index: 998;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 2rem;
     .logo{
         font-size: 1.5rem;
         font-weight: bold;
@@ -23,6 +26,7 @@
            letter-spacing: 2px;
            text-transform: uppercase;
            position:relative;
+           font-size: .9rem;
            &::before{
                content: '';
                display: inline-block;
