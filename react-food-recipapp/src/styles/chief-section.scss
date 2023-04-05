@@ -1,10 +1,14 @@
 .section.chiefs{
     display: block;
  }
+ .title{
+  text-align: center;
+ }
  .chiefs-container{
      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
      grid-gap: 1.5rem;
+     margin-top: 1.5rem;
  }
  .chief-card{
      display: flex;

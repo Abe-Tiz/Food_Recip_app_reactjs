@@ -70,25 +70,51 @@ img{
 @import "improveskill.scss";
 @import "quotesection.scss";
 @import "chief-section.scss";
+@import "previoussearch.scss";
+@import "footer.scss";
 
-.footer{
-    background-color: #0A0A0A;
-    color: #fff;
-    padding-block: 2rem;
+.recipie-container{
     display: grid;
-    grid-template-columns:3fr 1fr 1fr;
-    grid-gap: 1rem;
-    .footer-section{
-        p{
-            opacity: .9;
-            margin-bottom: .5rem;
-        }
-        p.title{
-            opacity: 1;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 1.5rem;
+}
+.recip-card-info{
+    padding: 17px;
+   
+}
+.recip-card{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    .author-img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 3px solid var(--background-light);
+        box-shadow: 0 1px 3px var(--shadow-color);
+        z-index: 2;
+        position: relative;
+        top: -45px;
+        margin-bottom: -2.25rem;
+    }
+    .recip-title{
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: .5rem;
+        color: var(--text-color);
+        margin-top: .25rem;
+    }
+    .recip-desc{
+        color: var(--text-light);
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+    .btn-view{
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-top: .75rem;
+        display: inline-block;
     }
 }
 .main{
