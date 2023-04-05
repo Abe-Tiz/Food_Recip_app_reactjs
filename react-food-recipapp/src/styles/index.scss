@@ -72,51 +72,58 @@ img{
 @import "chief-section.scss";
 @import "previoussearch.scss";
 @import "footer.scss";
+@import "recipies.scss";
 
-.recipie-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-gap: 1.5rem;
-}
-.recip-card-info{
-    padding: 17px;
-   
-}
-.recip-card{
-    border-radius: 10px;
-    overflow: hidden;
+.option-container{
     box-shadow: 0 5px 10px var(--shadow-color);
-    .author-img{
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        border: 3px solid var(--background-light);
-        box-shadow: 0 1px 3px var(--shadow-color);
-        z-index: 2;
-        position: relative;
-        top: -45px;
-        margin-bottom: -2.25rem;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    border-left: .5rem solid var(--primary-color);
+    background-color: var(--background-color);
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    .option{
+        height: 3.5rem;
+        width: 3.5rem;
+        box-shadow: 0 3px 6px var(--shadow-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.light{
+            background-color: #fff;
+        }
+        &.dark{
+            background-color: rgb(29, 29,29);
+        }
+        .check{
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            svg{
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+        }          
     }
-    .recip-title{
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: .5rem;
-        color: var(--text-color);
-        margin-top: .25rem;
-    }
-    .recip-desc{
-        color: var(--text-light);
-        font-size: .9rem;
-        letter-spacing: 1px;
-    }
-    .btn-view{
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--primary-color);
-        margin-top: .75rem;
-        display: inline-block;
-    }
+        .btn span{
+            display: inline-block;
+            margin-left: .5rem;
+        }
+
+    
 }
+.d-block h2{
+    font-size: 1.75rem;
+}
+
 .main{
     padding-block: 10vh;
 }
@@ -127,6 +134,9 @@ img{
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3vw;
+    &.d-block{
+        display: block;
+    }
     .title{
         color: var(--text-color);
         font-size: 2.5rem;
