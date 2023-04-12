@@ -23,6 +23,9 @@
 
 body{
     font-size: var(--font-size);
+    font-family: 'Roboto',sans-serif;
+    // padding-top: 55px;
+    background-color: var(--background-light);
 }
 a{
     text-decoration: none;
@@ -80,7 +83,7 @@ img{
     border-radius: 5px;
     margin-top: 1rem;
     border-left: .5rem solid var(--primary-color);
-    background-color: var(--background-color);
+    background-color: var(--background-light);
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
@@ -122,6 +125,7 @@ img{
 }
 .d-block h2{
     font-size: 1.75rem;
+    color: var(--text-color);
 }
 
 .main{

@@ -27,16 +27,17 @@
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-         padding: 0 1rem .5rem;
+         padding: .5rem 1rem .5rem;
          .chief-name{
              font-size: 1.2rem;
              font-weight: bold;
              color: var(--text-color);
          }
-         .chief-coun, .chief-cuisine{
+         .chief-count,.chief-cuisine{
             font-size: 1.2rem;
-            color: var(--text-light);
+            color:var(--text-light);
          }
+         
          .chief-icon{
              font-size: 1.2rem;
              a{

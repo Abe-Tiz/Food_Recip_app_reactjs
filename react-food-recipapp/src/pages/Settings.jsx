@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheck} from '@fortawesome/free-solid-svg-icons'
 const Settings = () => {
+
   const [settings,setSettings]=useState({
     "--background-color":"#fff",
     "--background-light":"#fff",
@@ -9,7 +10,7 @@ const Settings = () => {
     "--primary-color":"rgb(255,0,86)",
     "--text-color":"#0A0A0A",
     "--text-light":"#575757",
-    "--font-size":"16px",
+    "--font-size":"16px", 
     "--animation-speed":1
   });
 
@@ -29,25 +30,54 @@ const Settings = () => {
       "--text-color":"#0A0A0A",
       "--text-light":"#575757"
     },
-    {
-      "--shadow-color":"rgb(29,29,29)",
+    { 
+      "--background-color":"rgb(29,29,29)",
       "--background-light":"rgb(77,77,77)",
       "--shadow-color":"rgba(0,0,0,0.2)",
       "--text-color":"#ffffff",
-      "--text-light":"#eceaea"
+      "--text-light":"#ffffff"
     }
   ]
      
+
+  // theme setting
   const changeTheme = (i) =>{
      const _theme = {...thems[i]}
-     setTheme(i == 0 ? 'light' : 'dark')
+     setTheme(i === 0 ? 'light' : 'dark')
      //update settings
      let _settings = {...settings}
-     for(let key in _settings){
+     for(let key in _theme){
       _settings[key] = _theme[key]  
-       }
+       } 
        setSettings(_settings);
   }
+
+  // color setting
+    const changeColor = (i) =>{
+      const _color = primaryColor[i];
+      let _settings = {...settings};
+      _settings["--primary-color"] = _color;
+      setPrimarycol(i);
+      setSettings(_settings);
+    }
+
+    //fontsize setting
+    const changeFontsize = (i) => {
+      const _size = fontSizes[i];
+      let _settings = {...Settings};
+      _settings["--font-size"] = _size.value;
+      setFontSize(i);
+      setSettings(_settings);
+    }
+
+    //animationspeed setting
+    const changeAnimationSpeed = (i) =>{
+      const _speed = animationSpeeds[i];
+      let _settings = {...Settings};
+      _settings["--animation-speed"] = _speed.value;
+      setAnimationSpeed(i);
+      setSettings(_settings);
+    }
 
   const primaryColor =[
     "rgb(255,0,86)",
@@ -115,7 +145,7 @@ const Settings = () => {
           <div className="option-container">
              
              {primaryColor.map((color,index) =>(
-                <div className="option light" style={{backgroundColor:color}}>
+                <div className="option light" style={{backgroundColor:color}} onClick={() =>changeColor(index)}>
                   {primaryCol === index && (
                     <div className="check">
                       <FontAwesomeIcon icon={faCheck} />
@@ -132,7 +162,7 @@ const Settings = () => {
           <div className="option-container">
              
              {fontSizes.map((size,index) =>(
-                <button className='btn'>
+                <button className='btn' onClick={() => changeFontsize(index)}>
                    {size.title} 
                   {fontSize === index && <span><FontAwesomeIcon icon={faCheck} /></span> }
                   
@@ -146,7 +176,7 @@ const Settings = () => {
           <div className="option-container">
              
             { animationSpeeds.map((speed,index) =>(
-                <button className='btn'>
+                <button className='btn' onClick={()=>changeAnimationSpeed(index)}>
                    {speed.title} 
                   {animationSpeed === index && <span><FontAwesomeIcon icon={faCheck} /></span> }
                   
