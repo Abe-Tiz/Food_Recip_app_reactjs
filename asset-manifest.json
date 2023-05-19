@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Food-Reciep-App/static/css/main.dd24f622.css",
+    "main.js": "/Food-Reciep-App/static/js/main.a24a9f9a.js",
+    "index.html": "/Food-Reciep-App/index.html",
+    "main.dd24f622.css.map": "/Food-Reciep-App/static/css/main.dd24f622.css.map",
+    "main.a24a9f9a.js.map": "/Food-Reciep-App/static/js/main.a24a9f9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd24f622.css",
+    "static/js/main.a24a9f9a.js"
+  ]
+}
